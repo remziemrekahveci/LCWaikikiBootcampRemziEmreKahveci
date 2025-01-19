@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <groupId>org.example</groupId>
+    <artifactId>REK_LCW</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <aspectj.version>1.9.22</aspectj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.10</version> <!-- Veya uygun bir sürüm -->
+        </dependency>
+
+        <!--API sorgusu için gerekli 1. dependency assertion icin rest-assured -->
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <!--API sorgusu için gerekli 2. dependency json-->
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20190722</version>
+        </dependency>
+        <!--API sorgusu için gerekli 3. dependency json-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+
+        <!-- Pojo class olusturmak icin -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.27.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.27.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.17.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.24.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.20.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.5.3</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.github.nick318/findelement -->
+        <dependency>
+            <groupId>com.github.nick318</groupId>
+            <artifactId>findelement</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--API sorgusu için gerekli 2. dependency hard sorgu icin junit -->
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.22</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.22</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
+
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <arguments>
+                        <argument>-javaagent:/path/to/aspectjweaver.jar</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                </configuration>
+                <dependencies>
+                    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>1.9.22</version>
+                        <scope>runtime</scope>
+                    </dependency>
+
+
+
+
+                </dependencies>
+            </plugin>
+        </plugins>
+
+    </build>
+
+
+
+</project>
